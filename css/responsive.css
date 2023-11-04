@@ -1,5 +1,10 @@
 img.responsive {
   max-width: 100%; /* This ensures the image is no wider than the container */
   height: auto; /* This makes the height scale in proportion to the width */
-  display: block; /* Prevents images from displaying inline with extra space beneath */
+}
+
+@media (max-width: 768px) {
+  img.responsive {
+    width: 100%; /* Auf kleinen Bildschirmen nimmt das Bild 100% der Breite des Containers ein */
+  }
 }
