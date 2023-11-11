@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rezepte</title>
     <link rel="stylesheet" href="./css/responsive.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+
     <!-- Pfad zur CSS-Datei -->
   </head>
 
   <body>
-    <h1>Lomar's Chef Recipes</h1>
+    <h1 class="font-header1">Lomar's Chef Recipes</h1>
     <img
       class="responsive"
       src="https://media.tenor.com/z-k63cEg48sAAAAC/sanji-cooking.gif"
@@ -27,28 +32,27 @@
       </li>
     </ul> -->
 
-    <h2>Recipes</h2>
+    <!--Replaced li with <nav>-->
+    <h2 class="font-header2">Recipes</h2>
     <p>Choose your favorite recipe</p>
 
-    <nav>
+    <nav class="nav a:hover nav">
       <a href="./recipes/thai-curry.html">Thai Curry</a> |
       <a href="./recipes/bang-chicken.html">Bang Bang Chicken</a> |
       <a href="./recipes/homemade-sushi.html">Homemade Sushi</a>
     </nav>
 
-    <h3>Subscribe for new recipes</h3>
+    <h3 class="font-header3">Subscribe for new recipes</h3>
     <!-- the form element with action as attribute requires an script/backend server to process input data-->
     <form action="Backend_Process">
-      <div>
-        <label for="fname">First Name</label><br />
-        <input type="text" id="fname" name="fname" /><br />
-        <label for="lname">Last Name</label><br />
-        <input type="text" id="lname" name="lname" /><br />
-        <label for="email">E-Mail</label><br />
-        <input type="email" id="email" name="email" /> <br />
-        <br />
-        <input type="submit" value="Subscribe" />
-      </div>
+      <label for="fname">First Name</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+      <label for="lname">Last Name</label><br />
+      <input type="text" id="lname" name="lname" /><br />
+      <label for="email">E-Mail</label><br />
+      <input type="email" id="email" name="email" /> <br />
+      <br />
+      <input type="submit" value="Subscribe" />
     </form>
   </body>
 </html>

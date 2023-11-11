@@ -2,3 +2,84 @@ img.responsive {
   max-width: 100%; /* This ensures the image is no wider than the container */
   height: auto; /* This makes the height scale in proportion to the width */
 }
+
+.font-header1 {
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.font-header2 {
+  font-family: "Poppins";
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.font-header3 {
+  font-family: "Poppins";
+  font-size: 22px;
+  font-weight: 300;
+}
+
+p {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+li {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+nav a:hover {
+  background-color: #f1eaea;
+  color: #333;
+  font-family: "Poppins";
+  font-size: 22px;
+}
+
+nav {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+form {
+  /* Add your form styling here */
+  margin: 1px;
+  text-align: left;
+  font-family: "Poppins";
+  font-weight: lighter;
+  margin-bottom: 1px;
+}
+
+input[type="email"],
+input[type="text"] {
+  /* Style your input field */
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+}
+
+input[type="submit"] {
+  padding: 10px; /* Provide padding for the button */
+  margin-right: 10px; /* Right margin */
+  border: 1px solid #ccc; /* Border color and width */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f8f8f8; /* Background color */
+  color: #333; /* Text color */
+  font-weight: bold; /* Font weight */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+input[type="submit"]:hover {
+  background-color: #15244f; /* Background color on hover */
+  border-color: #15244f; /* Border color on hover */
+  color: #e9e7e7; /* Text color on hover */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+}
