@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rezepte</title>
-    <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
@@ -14,35 +14,37 @@
   </head>
 
   <body>
-    <h1 class="font-header1">Lomar's Chef Recipes</h1>
-    <img
-      class="responsive"
-      src="https://media.tenor.com/z-k63cEg48sAAAAC/sanji-cooking.gif"
-      alt="Sanji Cook GIF "
-    />
-    <!-- <ul>
-      <li>
-        <a href="recipes/thai-curry.html">Thai Curry</a>
-      </li>
-      <li>
-        <a href="recipes/bang-chicken.html"> Bang Bang Chicken</a>
-      </li>
-      <li>
-        <a href="recipes/homemade-sushi.html">Homemade Sushi</a>
-      </li>
-    </ul> -->
-
-    <!--Replaced li with <nav>-->
-    <h2 class="font-header2">Recipes</h2>
-    <p>Choose your favorite recipe</p>
-
-    <nav class="nav a:hover nav">
-      <a href="./recipes/thai-curry.html">Thai Curry</a> |
-      <a href="./recipes/bang-chicken.html">Bang Bang Chicken</a> |
-      <a href="./recipes/homemade-sushi.html">Homemade Sushi</a>
+    <!-- Navigation Bar -->
+    <nav id="mynav" class="nav a:hover nav">
+      <ul>
+        <li><a href="./recipes/thai-curry.html">Thai Curry</a></li>
+        <li><a href="./recipes/bang-chicken.html">Bang Bang Chicken</a></li>
+        <li><a href="./recipes/homemade-sushi.html">Homemade Sushi</a></li>
+        <li><a href="./about/about.html">About Me</a></li>
+        <li><a href="./contact/contact.html">Contact</a></li>
+      </ul>
     </nav>
+    <header>
+      <h1 class=".font-header1">Lomar's Chef Recipes</h1>
+      <img
+        class="responsive"
+        src="https://media.tenor.com/z-k63cEg48sAAAAC/sanji-cooking.gif"
+        alt="Sanji Cook GIF "
+      />
+    </header>
+    <p class="font-header2">
+      Welcome to Your Kitchen Adventure! Our collection of homemade recipes is a
+      celebration of flavors, each crafted from real kitchen experiences and
+      family traditions. These are more than recipes; they're memories, an
+      invitation to explore, play, and add your unique touch. Whether you're a
+      novice or a seasoned cook, these recipes are your canvas for culinary
+      creativity. From classic twists to exotic creations, your kitchen is the
+      stage for delicious discoveries. So, tie on your apron, and let's
+      transform simple ingredients into extraordinary meals. Ready, set, cook!
+      🍳🥗🥘
+    </p>
 
-    <h3 class="font-header3">Subscribe for new recipes</h3>
+    <div><h3 class="font-header3">Subscribe for new recipes</h3></div>
     <!-- the form element with action as attribute requires an script/backend server to process input data-->
     <form action="Backend_Process">
       <label for="fname">First Name</label><br />
@@ -52,7 +54,9 @@
       <label for="email">E-Mail</label><br />
       <input type="email" id="email" name="email" /> <br />
       <br />
-      <input type="submit" value="Subscribe" />
+      <button type="submit" onclick="alert('Thank you for subscribing!')">
+        Subscribe
+      </button>
     </form>
   </body>
 </html>
