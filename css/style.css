@@ -1,9 +1,15 @@
+@viewport {
+  width: device-width;
+  zoom: 1;
+}
+
 img.responsive {
   max-width: 100%; /* This ensures the image is no wider than the container */
   height: auto; /* This makes the height scale in proportion to the width */
   border-radius: 50px;
   display: block;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 body {
@@ -20,6 +26,7 @@ p {
   text-align: center;
   display: block;
   margin: 1 auto;
+  margin-top: 80px; /* Platz für die Navigationsleiste, angepasst an deren Höhe */
 }
 
 .font-header1 {
@@ -141,12 +148,12 @@ a {
 
 form {
   /* Add your form styling here */
-  margin: 0 auto;
+  margin: 20 auto;
   text-align: center;
-  display: block;
   font-family: "Poppins";
   font-weight: 100;
   margin-bottom: 1px;
+  max-width: 200px;
 }
 
 input[type="email"],
@@ -158,17 +165,26 @@ input[type="text"] {
   border: 2px solid #ccc;
   border-radius: 5px;
   padding: 8px;
+  width: calc(
+    100% - 40px
+  ); /* Passt die Breite an den Container an und berücksichtigt das Padding */
+  margin: 10px auto; /* Zentriert und fügt vertikalen Abstand hinzu */
+  box-sizing: border-box; /* Stellt sicher, dass das Padding und Border in die Breite inkludiert sind */
 }
 
 button[type="submit"] {
   padding: 15px; /* Provide padding for the button */
-  margin-right: 20px; /* Right margin */
+  margin-right: 10px auto; /* Right margin */
+  box-sizing: border-box;
+  width: calc(
+    100% - 40px
+  ); /* Passt die Breite an den Container an und berücksichtigt das Padding */
   border: 1px solid #ccc; /* Border color and width */
   border-radius: 10px; /* Rounded corners */
   background-color: #f8f8f8; /* Background color */
   color: #333; /* Text color */
   font-weight: bold; /* Font weight */
-  cursor: wait; /* Changes the cursor to a pointer on hover */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
   transition: all 0.4s ease; /* Smooth transition for hover effect */
 }
 
