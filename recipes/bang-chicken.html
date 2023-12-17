@@ -2,31 +2,67 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Rezepte</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bang Bang Chicken</title>
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <script>
+      function navBarFunction() {
+        document
+          .getElementsByClassName("navbar")[0]
+          .classList.toggle("responsive");
+      }
+    </script>
   </head>
 
   <body>
-    <nav id="mynav" class="nav a:hover nav">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../recipes/thai-curry.html">Thai Curry</a></li>
-        <li><a href="../recipes/bang-chicken.html">Bang Bang Chicken</a></li>
-        <li><a href="../recipes/homemade-sushi.html">Homemade Sushi</a></li>
-        <li><a href="../about/about.html">About Me</a></li>
-        <li><a href="../contact/contact.html">Contact</a></li>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+      <ul style="padding-left: 0px">
+        <li class="logo"><a href="#"> lomar </a></li>
+
+        <section class="div_navbar_items">
+          <li class="navbar_items"><a href="/index.html"> home </a></li>
+          <li class="navbar_items">
+            <a href="/about/about.html"> about me </a>
+          </li>
+          <li class="navbar_items">
+            <a href="/recipes/bang-chicken.html"> bang-chicken </a>
+          </li>
+          <li class="navbar_items">
+            <a href="/recipes/homemade-sushi.html"> hommade-sushi </a>
+          </li>
+          <li class="navbar_items">
+            <a href="/recipes/thai-curry.html"> thai-curry </a>
+          </li>
+        </section>
+
+        <li class="icon">
+          <a href="#" onclick="navBarFunction()"> &#9776;</a>
+        </li>
       </ul>
-    </nav>
-    <h1 class="font-header1" id="Go_top">Bang Bang Chicken</h1>
+    </div>
+    <!--         closing navbar  -->
+    <h1 id="Go_top">Bang Bang Chicken</h1>
     <img
+      class="image"
       src="https://www.allrecipes.com/thmb/3meb8SiBZU6cUdcNhTkKZ_iHSaM=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/6644307-bang-bang-chicken-Diana71-1x1-1-2299f11618e24300b3a6eeb2b1dbc24d.jpg"
       alt="Bang Bang Chicken Meal Picture"
       class="responsive"
     />
 
-    <h2 class="font-header2">Description</h2>
-    <p>
+    <h2>Description</h2>
+    <p class="textbox">
       This bang bang chicken is a wonderful Americanized version of an extremely
       popular Sichuan Chinese dish. With twice-fried chicken, you get the crispy
       fried breading you'd expect, and the bang bang sauce drizzle makes the
@@ -34,7 +70,18 @@
       version. Pay attention to the notes in the directions.
     </p>
 
-    <table border="1">
+    <small class="ds-recipe-meta rds-recipe-meta"
+      ><span class="rds-recipe-meta__badge"
+        ><i class="material-symbols-outlined"></i> Prep 30 minutes </span
+      ><span class="rds-recipe-meta__badge"
+        ><i class="material-symbols-outlined"></i> Cooking 10 minutes </span
+      ><span class="rds-recipe-meta__badge"
+        ><i class="material-symbols-outlined"></i>
+        Total 40 minutes
+      </span></small
+    >
+
+    <!-- <table border="1">
       <caption>
         <em>Time Frame</em>
       </caption>
@@ -58,72 +105,77 @@
         <th>Servings:</th>
         <td>4</td>
       </tr>
-    </table>
+    </table> -->
 
-    <h2 class="font-header2">Ingredients</h2>
-    <ul class="position li">
-      <li>⅓ cup milk</li>
-      <li>1 large egg</li>
-      <li>1 pound boneless, skinless chicken breasts, cut into 1-inch cubes</li>
-      <li>¼ cup potato starch</li>
-      <li>¼ cup all-purpose flour</li>
-      <li>½ teaspoon salt</li>
-      <li>¼ teaspoon ground black pepper</li>
-      <li>¼ teaspoon shichimi togarashi (Japanese red pepper condiment)</li>
-      <li>2 cups oil for frying, or as needed</li>
-      <li>¼ cup mayonnaise</li>
-      <li>2 tablespoons honey</li>
-      <li>2 tablespoons sweet chili sauce</li>
-      <li>1 teaspoon gochujang (Korean hot pepper paste)</li>
-    </ul>
-    <h2 class="font-header2">Steps</h2>
-    <ol class="position ol">
-      <li>
-        Whisk together milk and egg in a large bowl until well combined. Add
-        chicken; stir to coat and allow to marinate for 15 minutes. Drain and
-        discard egg mixture.
-      </li>
-      <li>
-        Combine potato starch, flour, salt, pepper, and shichimi in a medium
-        bowl. Pour into a large plastic resealable bag. Add chicken; seal the
-        bag and shake until chicken is well coated.
-      </li>
-      <li>
-        Heat 2 inches oil in a deep saucepan over medium heat to 325 degrees F
-        (165 degrees C).
-      </li>
-      <li>
-        Working in batches of about 5 to 8 pieces at a time, cook chicken in hot
-        oil for about 90 seconds. Remove to a paper towel-lined plate; keep each
-        batch separate.
-      </li>
-      <li>
-        Increase oil temperature to 350 degrees F (175 degrees C). The oil
-        should be continuously boiling at this point. Carefully re-add the first
-        batch of chicken and fry for another 90 seconds. Remove to another paper
-        towel-lined plate. Repeat with remaining batches of chicken.
-      </li>
-      <li>
-        Mix together mayonnaise, honey, sweet chili sauce, and gochujang in a
-        large serving bowl until combined. Toss fried chicken with sauce to
-        coat.
-      </li>
-    </ol>
+    <div class="container-ingredients">
+      <h2 class="container-ingredients h2">Ingredients</h2>
+      <ul>
+        <li>⅓ cup milk</li>
+        <li>1 large egg</li>
+        <li>
+          1 pound boneless, skinless chicken breasts, <br>cut into 1-inch cubes
+        </li>
+        <li>¼ cup potato starch</li>
+        <li>¼ cup all-purpose flour</li>
+        <li>½ teaspoon salt</li>
+        <li>¼ teaspoon ground black pepper</li>
+        <li>¼ teaspoon shichimi togarashi <br> (Japanese red pepper condiment)</li>
+        <li>2 cups oil for frying, or as needed</li>
+        <li>¼ cup mayonnaise</li>
+        <li>2 tablespoons honey</li>
+        <li>2 tablespoons sweet chili sauce</li>
+        <li>1 teaspoon gochujang (Korean hot pepper paste)</li>
+      </ul>
+    </div>
 
-    <h3 class="font-header3"><em>Tips</em></h3>
-    <p>
-      <em
-        >You can substitute potato starch for cornstarch if desired. Potato
+    <div class="container-steps">
+      <h2 class="container-steps h2">Steps</h2>
+      <ol>
+        <li>
+          Whisk together milk and egg in a large bowl until well combined. Add
+          chicken; stir to coat and allow to marinate for 15 minutes. Drain and
+          discard egg mixture.
+        </li>
+        <li>
+          Combine potato starch, flour, salt, pepper, and shichimi in a medium
+          bowl. Pour into a large plastic resealable bag. Add chicken; seal the
+          bag and shake until chicken is well coated.
+        </li>
+        <li>
+          Heat 2 inches oil in a deep saucepan over medium heat to 325 degrees F
+          (165 degrees C).
+        </li>
+        <li>
+          Working in batches of about 5 to 8 pieces at a time, cook chicken in
+          hot oil for about 90 seconds. Remove to a paper towel-lined plate;
+          keep each batch separate.
+        </li>
+        <li>
+          Increase oil temperature to 350 degrees F (175 degrees C). The oil
+          should be continuously boiling at this point. Carefully re-add the
+          first batch of chicken and fry for another 90 seconds. Remove to
+          another paper towel-lined plate. Repeat with remaining batches of
+          chicken.
+        </li>
+        <li>
+          Mix together mayonnaise, honey, sweet chili sauce, and gochujang in a
+          large serving bowl until combined. Toss fried chicken with sauce to
+          coat.
+        </li>
+      </ol>
+    </div>
+
+    <div class="container-tips">
+      <h3>Tips</h3>
+      <p>
+        You can substitute potato starch for cornstarch if desired. Potato
         starch is regularly used in Asian cuisine because it has a silkier feel
         and takes on a neutral flavor. You can use any ground red pepper instead
         of shichimi togarashi. You can use any hot sauce instead of gochujang.
         It's beneficial to have a splatter screen if frying the chicken on the
         stovetop. The reason for twice-frying is that it's the secret to
-        crispier fried chicken!</em
-      >
-    </p>
-    <ul>
-      <li><a href="../index.html">Home</a></li>
-    </ul>
+        crispier fried chicken!
+      </p>
+    </div>
   </body>
 </html>

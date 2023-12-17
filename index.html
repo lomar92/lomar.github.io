@@ -5,58 +5,105 @@
     <title>Rezepte</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Pfad zur CSS-Datei -->
+    <script>
+      function navBarFunction() {
+        document
+          .getElementsByClassName("navbar")[0]
+          .classList.toggle("responsive");
+      }
+    </script>
   </head>
 
   <body>
     <!-- Navigation Bar -->
-    <nav id="mynav" class="nav a:hover nav">
-      <ul>
-        <li><a href="./recipes/thai-curry.html">Thai Curry</a></li>
-        <li><a href="./recipes/bang-chicken.html">Bang Bang Chicken</a></li>
-        <li><a href="./recipes/homemade-sushi.html">Homemade Sushi</a></li>
-        <li><a href="./about/about.html">About Me</a></li>
-        <li><a href="./contact/contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <header>
-      <h1 class=".font-header1">Lomar's Chef Recipes</h1>
-      <img
-        class="responsive"
-        src="https://media.tenor.com/z-k63cEg48sAAAAC/sanji-cooking.gif"
-        alt="Sanji Cook GIF "
-      />
-    </header>
-    <p class="font-header2">
-      Welcome to Your Kitchen Adventure! Our collection of homemade recipes is a
-      celebration of flavors, each crafted from real kitchen experiences and
-      family traditions. These are more than recipes; they're memories, an
-      invitation to explore, play, and add your unique touch. Whether you're a
-      novice or a seasoned cook, these recipes are your canvas for culinary
-      creativity. From classic twists to exotic creations, your kitchen is the
-      stage for delicious discoveries. So, tie on your apron, and let's
-      transform simple ingredients into extraordinary meals. Ready, set, cook!
-      🍳🥗🥘
-    </p>
+    <div class="navbar">
+      <ul style="padding-left: 0px">
+        <li class="logo"><a href="#"> lomar </a></li>
 
-    <div><h3 class="font-header3">Subscribe for new recipes</h3></div>
+        <section class="div_navbar_items">
+          <li class="navbar_items"><a href="/index.html"> home </a></li>
+          <li class="navbar_items">
+            <a href="/about/about.html"> about me </a>
+          </li>
+          <li class="navbar_items">
+            <a href="/recipes/bang-chicken.html"> bang-chicken </a>
+          </li>
+          <li class="navbar_items">
+            <a href="/recipes/homemade-sushi.html"> hommade-sushi </a>
+          </li>
+          <li class="navbar_items">
+            <a href="/recipes/thai-curry.html"> thai-curry </a>
+          </li>
+        </section>
+
+        <li class="icon">
+          <a href="#" onclick="navBarFunction()"> &#9776;</a>
+        </li>
+      </ul>
+    </div>
+    <!--         closing navbar  -->
+
+    <div>
+      <h1>Welcome to YumCorner</h1>
+    </div>
+
+    <!-- Image Header -->
+    <img class="image" src="./img/cooking-header.jpg" alt="Cooking Tool" />
+    <!-- Closing Image -->
+
+    <div class="textbox">
+      <p>
+        Our collection of homemade recipes is a celebration of flavors, each
+        crafted from real kitchen experiences and family traditions. These are
+        more than recipes; they're memories, an invitation to explore, play, and
+        add your unique touch. Whether you're a novice or a seasoned cook, these
+        recipes are your canvas for culinary creativity. From classic twists to
+        exotic creations, your kitchen is the stage for delicious discoveries.
+        So, tie on your apron, and let's transform simple ingredients into
+        extraordinary meals. Ready, set, cook! 🍳🥗🥘
+      </p>
+    </div>
+
+    <div><h3>Subscribe for new recipes</h3></div>
     <!-- the form element with action as attribute requires an script/backend server to process input data-->
     <form action="Backend_Process">
       <label for="fname">First Name</label><br />
-      <input type="text" id="fname" name="fname" /><br />
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="Your First Name"
+      /><br />
       <label for="lname">Last Name</label><br />
-      <input type="text" id="lname" name="lname" /><br />
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        placeholder="Your Last Name"
+      /><br />
       <label for="email">E-Mail</label><br />
-      <input type="email" id="email" name="email" /> <br />
+      <input type="email" id="email" name="email" autocomplete="email" /> <br />
       <br />
       <button type="submit" onclick="alert('Thank you for subscribing!')">
         Subscribe
       </button>
     </form>
+
+    <!-- Footer - Here comes a simple footer -->
+    <!-- <footer>
+        <li class="foot">Impressum</li>
+        <li class="foot">Contact</li>
+        <li class="foot">Privacy</li>
+        <li class="foot">About Us</li>
+        <li class="foot">Social Media</li>
+      </ul>
+    </footer> -->
+    <!-- Site footer -->
   </body>
 </html>

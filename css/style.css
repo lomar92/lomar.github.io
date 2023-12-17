@@ -1,191 +1,318 @@
-img.responsive {
-  max-width: 100%; /* This ensures the image is no wider than the container */
-  height: auto; /* This makes the height scale in proportion to the width */
-  border-radius: 50px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px;
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
-body {
-  font-family: "Poppins";
-  color: white;
-  background-color: #393939;
-  padding-top: 70px;
+/* Navigation Bar */
+
+.container {
+  /*  
+  background-color: pink;
+  height:1500px; testing*/
+  margin: auto;
+  width: 90%;
 }
 
-h1,
-h2,
-h3,
-p {
-  text-align: center;
-  display: block;
-  margin: 1 auto;
-  margin-top: 80px; /* Platz für die Navigationsleiste, angepasst an deren Höhe */
-}
-
-.font-header1 {
-  font-size: 2em;
-  font-weight: 800;
-}
-
-.font-header2 {
-  font-family: "Poppins";
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.font-header3 {
-  font-family: "Poppins";
-  font-size: 22px;
-  font-weight: 500;
-}
-
-p {
-  font-size: 20px;
-  font-weight: 100;
-}
-
-ul.position li {
-  padding: 0;
-  text-align: left;
-  list-style: disc;
-}
-
-ol.position li {
-  padding: 0;
-  text-align: left;
-  list-style: decimal;
-}
-
-li {
-  font-family: "Poppins";
-  font-size: 20px;
-  font-weight: 100;
-  list-style: none;
-}
-
-#mynav {
-  background-color: #f7f7f7;
+.navbar {
+  position: fixed;
+  z-index: 100;
+  overflow: hidden;
+  margin: auto;
+  background-color: #24322e;
   width: 100%;
-  padding: 1em;
-  z-index: 10;
-  border-top-left-radius: 0.25em;
-  border-top-right-radius: 0.25em;
-  text-align: center;
-  position: fixed;
-  top: 0;
   left: 0;
-}
-
-#mynav ul {
-  margin: 0;
-  padding: 0;
-  /* Makes sure there are no bullets in a list*/
-  list-style: none;
-}
-
-#mynav ul li {
-  display: inline-block;
-  margin: 0 0.35em;
-  padding: 0;
-  /* Center the text vertically */
-  vertical-align: middle;
-}
-
-#mynav ul li a {
-  display: inline-block;
-  height: 2.25em;
-  line-height: 2.25em;
-  padding: 0 1.25em;
-  border: 0;
-  border-radius: 8px;
-  box-shadow: inset 0 0 0 1px transparent;
-  text-decoration: none;
-}
-
-nav {
-  font-family: "Poppins";
-  font-size: 20px;
-  font-weight: 100;
-  color: #ff5a09;
-}
-
-nav a:hover {
-  background-color: #ff5a09;
-  color: white;
-  font-family: "Poppins";
-  font-size: 20px;
-  transition: all 0.8s;
-}
-
-#nav.alt {
-  position: fixed;
   top: 0;
-  padding: 0.5em 1em;
-  background-color: rgba(247, 247, 247, 0.95);
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  z-index: 10000;
+  border-top-right-radius: 0.25em;
+  border-top-left-radius: 0.25em;
 }
 
-#mynav.alt ul li {
-  margin: 0 0.175em;
-}
-#mynav.alt ul li a {
-  font-size: 0.9em;
+.navbar li.logo,
+.navbar li.navbar_items {
+  list-style-type: none;
+  display: inline-block;
 }
 
-a {
+.navbar li a {
+  font-size: 1.05em;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 16px;
   text-decoration: none;
-  color: #ff5a09;
+}
+
+.navbar li.navbar_items a:hover {
+  border-bottom-style: solid;
+  border-bottom-color: white;
+  /*   padding-bottom: 5px; */
+}
+
+.navbar li.icon {
+  display: none;
+}
+
+.div_navbar_items {
+  float: right;
+  padding-right: 1%;
+}
+
+.intro {
+  position: relative;
+  top: 100px;
+  text-align: center;
+}
+/* ----------------------- */
+
+/* responsive navigation bar: CSS */
+
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("navbar_name"). Show the list item that contains the link to open and close the topnav (li.icon) */
+
+@media screen and (max-width: 875px) {
+  .navbar li.navbar_items {
+    display: none;
+  }
+  .navbar li.icon {
+    float: right;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 19px;
+  }
+}
+
+/* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens */
+
+@media screen and (max-width: 875px) {
+  .navbar.responsive {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #33d2dc;
+    transition: background-color 0.6s;
+  }
+
+  .navbar.responsive li.logo {
+    float: left;
+    display: block;
+  }
+  .navbar.responsive .div_navbar_items {
+    float: none;
+    padding-right: 0;
+  }
+
+  .navbar.responsive li.navbar_items {
+    display: block;
+    padding: 50px;
+    font-size: 25px;
+  }
+  .navbar.responsive li.navbar_items a {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar.responsive li.navbar_items a:hover {
+    color: #17171e;
+    border-bottom-color: transparent;
+  }
+}
+
+/* end of navgation bar styling - responsive */
+
+h1 {
+  margin-top: 4em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+h2,
+h3 {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.image {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.5em;
+}
+
+/* text container */
+p {
+  font-size: 100%;
+}
+
+.textbox {
+  width: 50%;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 2em;
+  border: solid #33d1dc99;
+  border-radius: 1em;
+  padding: 1em;
 }
 
 form {
-  /* Add your form styling here */
-  margin: 20 auto;
-  text-align: center;
-  font-family: "Poppins";
-  font-weight: 100;
-  margin-bottom: 1px;
-  max-width: 200px;
+  background-color: #8f815718;
+  max-width: max-content;
+  margin: auto;
+  /* border: solid #8f8157; */
+  padding: 1em;
+  border-radius: 1em;
 }
 
-input[type="email"],
-input[type="text"] {
-  /* Style your input field */
-
-  padding: 20px;
-  margin-right: 1px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  padding: 8px;
-  width: calc(
-    100% - 40px
-  ); /* Passt die Breite an den Container an und berücksichtigt das Padding */
-  margin: 10px auto; /* Zentriert und fügt vertikalen Abstand hinzu */
+input {
+  width: calc(100%);
+  border: 0.1em solid #ccc;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  margin: auto; /* Zentriert und fügt vertikalen Abstand hinzu */
   box-sizing: border-box; /* Stellt sicher, dass das Padding und Border in die Breite inkludiert sind */
 }
 
 button[type="submit"] {
-  padding: 15px; /* Provide padding for the button */
-  margin-right: 10px auto; /* Right margin */
-  box-sizing: border-box;
-  width: calc(
-    100% - 40px
-  ); /* Passt die Breite an den Container an und berücksichtigt das Padding */
-  border: 1px solid #ccc; /* Border color and width */
-  border-radius: 10px; /* Rounded corners */
-  background-color: #f8f8f8; /* Background color */
-  color: #333; /* Text color */
-  font-weight: bold; /* Font weight */
-  cursor: pointer; /* Changes the cursor to a pointer on hover */
-  transition: all 0.4s ease; /* Smooth transition for hover effect */
+  width: calc(100% - 50%);
+  display: block;
+  margin: auto;
+  border: 0.1em solid #ccc;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
+  background-color: #ffff;
+  transition: all 0.4s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #ff5a09; /* Background color on hover */
-  border-color: #15244f; /* Border color on hover */
-  color: #e9e7e7; /* Text color on hover */
+  width: calc(100% - 50%);
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  border: 0.1em solid #33d2dc;
+  background-color: #33d1dca3;
+  color: #24322e;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a shadow effect on hover */
+}
+
+/* Flexbox Thema */
+/* Zubereitung */
+/* icon uhr */
+.material-symbols-outlined {
+  word-wrap: normal;
+  direction: ltr;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  /* padding: 0.1em; */
+  margin-right: 0.3em;
+  margin-left: -0.15em;
+}
+
+.rds-recipe-meta .rds-recipe-meta__badge,
+.recipe-meta .rds-recipe-meta__badge {
+  background: #cccccc42;
+  min-width: 15%;
+  justify-content: center;
+}
+
+.ds-recipe-meta {
+  display: flex;
+  justify-content: center; /* Zentriert horizontal */
+  align-items: center; /* Zentriert vertikal */
+}
+
+.ds-recipe-meta > span {
+  height: fit-content;
+  align-items: center;
+  background: #a7a7a24d;
+  border-radius: 8px;
+  color: #212018;
+  display: inline-flex;
+  font-size: 14px;
+  margin: 1.2em;
+  padding: 1.4em;
+  margin-top: 2em;
+}
+
+/* FlexBox Thema Ende */
+
+/* Adjust image within a text wrap it with a div */
+/* hommade-sushi */
+.float {
+  float: left;
+  width: 100%;
+  max-width: 40%;
+  height: auto;
+  padding-top: 0.5em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+}
+
+.clearfix {
+  line-height: 1.5;
+  background-color: #33d1dc15;
+  border-radius: 0.5em;
+  overflow: auto;
+  width: 700px;
+  max-width: 70%;
+  height: fit-content;
+  margin: auto;
+  margin-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: justify;
+}
+
+/* sushi end */
+
+.container-ingredients {
+  width: max-content;
+  padding: 2em;
+  margin: auto;
+  line-height: 2;
+}
+
+.container-ingredients .h2 {
+  padding-top: 0px;
+  padding-bottom: 0.5em;
+}
+
+.container-steps {
+  width: max-content;
+  max-width: 70%;
+  margin: auto;
+  line-height: 2;
+}
+
+.container-steps h2 {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.container-steps ol {
+  background-color: #f2f2f2;
+  padding: 2.5em;
+  border-radius: 0.5em;
+}
+
+.container-tips {
+  width: max-content;
+  max-width: 70%;
+  margin: auto;
+  text-align: justify;
+}
+
+.container-tips p {
+  background-color: #ebf5fb90;
+  padding: 2em;
+  border-radius: 0.5em;
+  line-height: 2;
 }

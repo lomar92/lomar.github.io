@@ -2,83 +2,129 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Rezepte</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
-    <title>Thai Curry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <script>
+      function navBarFunction() {
+        document
+          .getElementsByClassName("navbar")[0]
+          .classList.toggle("responsive");
+      }
+    </script>
   </head>
+
   <body>
     <!-- Navigation Bar -->
-    <nav id="mynav" class="nav a:hover nav">
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../recipes/thai-curry.html">Thai Curry</a></li>
-        <li><a href="../recipes/bang-chicken.html">Bang Bang Chicken</a></li>
-        <li><a href="../recipes/homemade-sushi.html">Homemade Sushi</a></li>
-        <li><a href="../about/about.html">About Me</a></li>
-        <li><a href="../contact/contact.html">Contact</a></li>
+    <div class="navbar">
+      <ul style="padding-left: 0px">
+        <li class="logo"><a href="#"> lomar </a></li>
+
+        <section class="div_navbar_items">
+          <li class="navbar_items"><a href="/index.html"> home </a></li>
+          <li class="navbar_items">
+            <a href="/about/about.html"> about me </a>
+          </li>
+          <li class="navbar_items">
+            <a href="/recipes/bang-chicken.html"> bang-chicken </a>
+          </li>
+          <li class="navbar_items">
+            <a href="/recipes/homemade-sushi.html"> hommade-sushi </a>
+          </li>
+          <li class="navbar_items">
+            <a href="/recipes/thai-curry.html"> thai-curry </a>
+          </li>
+        </section>
+
+        <li class="icon">
+          <a href="#" onclick="navBarFunction()"> &#9776;</a>
+        </li>
       </ul>
-    </nav>
+    </div>
+    <!--         closing navbar  -->
     <h1 class="font-header1" id="Go_Top">Thai Green Curry Chicken</h1>
 
     <img
       src="https://www.allrecipes.com/thmb/85ZAhC3L3J0xmiiNsMOFNYegJQk=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/141833-thai-green-curry-chicken-ddmfs-Beauty-3x4-1-ac96aa4323744fd6b494c7f0ab59b4ca.jpg"
       alt="This is a Thai Curry Meal Picture"
-      class="responsive"
+      class="image"
     />
-    <h2 class="font-header2">Description</h2>
-    <p>
+    <h2>Description</h2>
+    <p class="textbox">
       This Thai green curry recipe never fails to please! It is quick and easy
       to make and the chicken stays moist and tender. Serve over jasmine rice
       for a satisfying meal.
     </p>
 
-    <h2 class="font-header2">Ingredients</h2>
-    <ul class="position li">
-      <li>1 tablespoon dark soy sauce</li>
-      <li>1 tablespoon all-purpose flour</li>
-      <li>
-        1 pound skinless, boneless chicken breast halves - cut into 1 inch cubes
-      </li>
-      <li>2 tablespoons cooking oil</li>
-      <li>2 tablespoons green curry paste</li>
-      <li>2 green onions with tops, chopped</li>
-      <li>3 cloves garlic, peeled and chopped</li>
-      <li>1 teaspoon fresh ginger, peeled and finely chopped</li>
-      <li>2 cups coconut milk</li>
-      <li>2 tablespoons white sugar</li>
-      <li>1 tablespoon fish sauce</li>
-      <li>1 tablespoon dark soy sauce</li>
-      <li>½ cup cilantro leaves, for garnish</li>
-    </ul>
+    <small class="ds-recipe-meta rds-recipe-meta"
+      ><span class="rds-recipe-meta__badge"
+        ><i class="material-symbols-outlined"></i> Prep 10 minutes </span
+      ><span class="rds-recipe-meta__badge"
+        ><i class="material-symbols-outlined"></i> Cooking 10 minutes </span
+      ><span class="rds-recipe-meta__badge"
+        ><i class="material-symbols-outlined"></i>
+        Total 20 minutes
+      </span></small
+    >
+    <div class="container-ingredients">
+      <h2 class="container-ingredients h2">Ingredients</h2>
+      <ul>
+        <li>1 tablespoon dark soy sauce</li>
+        <li>1 tablespoon all-purpose flour</li>
+        <li>
+          1 pound skinless, boneless chicken breast halves - <br />
+          cut into 1 inch cubes
+        </li>
+        <li>2 tablespoons cooking oil</li>
+        <li>2 tablespoons green curry paste</li>
+        <li>2 green onions with tops, chopped</li>
+        <li>3 cloves garlic, peeled and chopped</li>
+        <li>1 teaspoon fresh ginger, peeled and finely chopped</li>
+        <li>2 cups coconut milk</li>
+        <li>2 tablespoons white sugar</li>
+        <li>1 tablespoon fish sauce</li>
+        <li>1 tablespoon dark soy sauce</li>
+        <li>½ cup cilantro leaves, for garnish</li>
+      </ul>
+    </div>
 
-    <h2 class="font-header2">Steps</h2>
-    <ol class="position ol">
-      <li>
-        Pour 1 tablespoon soy sauce into a shallow dish. Place 1 tablespoon
-        flour into a separate shallow dish. Toss chicken pieces in soy sauce,
-        then in flour, coating pieces evenly.
-      </li>
-      <li>
-        Heat oil in a large skillet over medium-high heat. Add chicken; cook and
-        stir until browned, about 5 minutes. Transfer chicken to a plate; set
-        aside.
-      </li>
-      <li>
-        Reduce heat to medium and stir in curry paste. Cook for 1 minute until
-        fragrant. Add green onions, garlic, and ginger; cook an additional 2
-        minutes.
-      </li>
-      <li>
-        Return chicken to the skillet, stirring to coat with curry paste. Stir
-        in coconut milk, sugar, fish sauce, and remaining 1 tablespoon soy
-        sauce; simmer over medium heat until chicken is tender and cooked
-        through, about 20 minutes. Serve curry with cilantro leaves.
-      </li>
-    </ol>
-
+    <div class="container-steps">
+      <h2>Steps</h2>
+      <ol>
+        <li>
+          Pour 1 tablespoon soy sauce into a shallow dish. Place 1 tablespoon
+          flour into a separate shallow dish. Toss chicken pieces in soy sauce,
+          then in flour, coating pieces evenly.
+        </li>
+        <li>
+          Heat oil in a large skillet over medium-high heat. Add chicken; cook
+          and stir until browned, about 5 minutes. Transfer chicken to a plate;
+          set aside.
+        </li>
+        <li>
+          Reduce heat to medium and stir in curry paste. Cook for 1 minute until
+          fragrant. Add green onions, garlic, and ginger; cook an additional 2
+          minutes.
+        </li>
+        <li>
+          Return chicken to the skillet, stirring to coat with curry paste. Stir
+          in coconut milk, sugar, fish sauce, and remaining 1 tablespoon soy
+          sauce; simmer over medium heat until chicken is tender and cooked
+          through, about 20 minutes. Serve curry with cilantro leaves.
+        </li>
+      </ol>
+    </div>
     <!--Bottom Navigation-->
-    <ul>
-      <li><a href="#Go_Top">Go Top</a></li>
-    </ul>
   </body>
 </html>
